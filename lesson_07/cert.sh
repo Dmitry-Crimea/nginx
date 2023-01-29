@@ -3,6 +3,7 @@ mkdir -p /opt/www/acme
 letsencrypt certonly --webroot -w /opt/www/acme -d ssl.3b54d9c4446225f6721ce16370cec007.kis.im
 
 mkdir -p /etc/nginx/ssl
+mkdir -p /opt/ssl
 
 openssl genrsa -out ca.key 2048
 openssl req -new -x509 -days 3650 -key ca.key -out ca.crt
